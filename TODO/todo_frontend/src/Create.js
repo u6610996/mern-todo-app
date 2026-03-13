@@ -6,7 +6,7 @@ const Create = () => {
     const [task, setTask] = useState('');
 
     const createTask = () => {
-        axios.post('http://localhost:5000/add', { task: task.trim() })
+        axios.post('/add', { task: task.trim() })
             .then(result => {
                 console.log(result.data);
                 window.location.reload();
@@ -33,3 +33,4 @@ const Create = () => {
 };
 
 export default Create;
+
